@@ -1,0 +1,8 @@
+<h1><%= @risk.name %></h1>
+
+<p><strong>Description:</strong> <%= @risk.description %></p>
+<p><strong>Severity:</strong> <%= @risk.severity %></p>
+<p><strong>Mitigations:</strong> <%= @risk.mitigations %></p>
+
+<%= link_to 'Edit Risk', edit_risk_path(@risk) %> |
+<%= link_to 'Back to Risks List', risks_path %>
