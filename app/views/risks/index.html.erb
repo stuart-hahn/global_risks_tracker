@@ -1,0 +1,12 @@
+<h1>Global Risks</h1>
+
+<ul>
+  <% @risks.each do |risk| %>
+    <li>
+      <strong><%= link_to risk.name, risk %></strong>
+      - <%= risk.severity %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Risk', new_risk_path %>

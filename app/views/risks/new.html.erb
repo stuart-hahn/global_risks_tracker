@@ -1,0 +1,27 @@
+<h1>New Risk</h1>
+
+<%= form_with model: @risk, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :severity %>
+    <%= form.select :severity, ['low', 'medium', 'high'] %>
+  </div>
+
+  <div>
+    <%= form.label :mitigations %>
+    <%= form.text_area :mitigations %>
+  </div>
+
+  <div>
+    <%= form.submit 'Create Risk' %>
+  </div>
+<% end %>
